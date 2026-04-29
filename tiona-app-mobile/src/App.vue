@@ -1,7 +1,8 @@
 <script setup>
+import Home from './components/home.vue';
 
 </script>
 
-<template>
-  <h1>Hello world!!!</h1>
+<template> 
+  <Home />
 </template>
