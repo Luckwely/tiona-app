@@ -23,13 +23,11 @@ const handClick = () => {
             </div>
         </div>
     </nav>
-    <div v-if="menuBar" class="p-4 rounded-3xl mt-1 z-10 fixed top-15 bg-black/20 backdrop-blur-sm w-full">
-        <ul>
-            <RouterLink to="/fihirana" class="mb-2 ">FIHIRANA</RouterLink>
-            <RouterLink to="/haa" class="mb-2 ">FIHIRANA</RouterLink>
-            <RouterLink to="/tsanta" class="mb-2 ">FIHIRANA</RouterLink>
-            <!-- <li class="mb-2 ">HAA</li> -->
-            <!-- <li class="mb-2 ">TSANTA</li> -->
-        </ul>
+    <div v-if="menuBar" class="px-10 py-5 mt-1 z-10 fixed top-14 bg-blue-400/30 backdrop-blur-2xl w-full">
+        <div class="flex flex-col gap-3">
+            <RouterLink to="/fihirana" class="mb-2 " @click="menuBar = false">FIHIRANA</RouterLink>
+            <RouterLink to="/haa" class="mb-2 " @click="menuBar = false">HAA</RouterLink>
+            <RouterLink to="/tsanta" class="mb-2 " @click="menuBar = false">TSANTA</RouterLink>
+        </div>
     </div>
 </template>
