@@ -1,0 +1,11 @@
+
+
+{
+  "appId": "com.tiona.app",
+  "appName": "tiona-app-mobile",
+  "webDir": "dist",
+  "server": {
+  "url": "http://192.168.1.189:5173",
+  "cleartext": true
+  }
+}
