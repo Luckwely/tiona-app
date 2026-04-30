@@ -2,21 +2,22 @@ const fihirana = [
   {
     "id": "01",
     "title": "Ny Fanahiko",
-    "key": "F",
-    "time_signature": "4/4",
-    "soprano": ["|d:d!d:d|r:r!r:|", "|m:m!r:d|d:-!-:|"],
-    "ato": ["|d:d!d:d|r:r!r:|", "|m:m!r:d|d:-!-:|"],
-    "tenor": ["|d:d!d:d|r:r!r:|", "|m:m!r:d|d:-!-:|"],
-    "content": ["Inot no havalko...", "Ny fo sy ny aiko..."]
-  },
-  {
-    "id": "02",
-    "title": "Ny Fanahiko 2",
-    "key": "G",
-    "time_signature": "4/4",
-    "soprano": ["|d:d!d:d|r:r!r:|", "|m:m!r:d|d:-!-:|"],
-    "ato": ["|d:d!d:d|r:r!r:|", "|m:m!r:d|d:-!-:|"],
-    "tenor": ["|d:d!d:d|r:r!r:|", "|m:m!r:d|d:-!-:|"],
+    "measures": [
+    {
+      "s": "| s : d'! - : d'|",
+      "a": "| m : s ! - : s |",
+      "t": "| d : m ! - : m |",
+      "b": "| d : d ! - : d |",
+      "lyrics": "To- mpo- za- ny" // Fragment for this measure
+    },
+    {
+      "s": "| s : d'! - : d'|",
+      "a": "| m : s ! - : s |",
+      "t": "| d : m ! - : m |",
+      "b": "| d : d ! - : d |",
+      "lyrics": "mba je- re- o"
+    }
+  ],
     "content": ["Inot no havalko...", "Ny fo sy ny aiko..."]
   }
 ];
