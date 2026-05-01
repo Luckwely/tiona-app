@@ -4,7 +4,7 @@ const fihirana = [
     "title": "FIHIRANA",
     "measures": [
     {
-      "indication": "",
+      "indication": " ",
       "S": "  s  :  d' !  -  :  d' ",
       "A": "  m  :  s  !  -  :  s  ",
       "T": "  d  :  m  !  -  :  m  ",
@@ -12,6 +12,7 @@ const fihirana = [
       "lyrics": "dsdsdfsdfsdfsdsdf" 
     },
     {
+      "indication": " ",
       "S": " s.s :  d' !  -  :  d' ",
       "A": "  m  :     !  -  :  s  ",
       "T": "  d  :  m  !  -  :  m  ",
@@ -19,6 +20,7 @@ const fihirana = [
       "lyrics": "dsfsdfsdfsdfsdsdfsdf"
     },
     {
+      "indication": " ",
       "S": "  s  :  d' !  -  :  d' ",
       "A": "  m  :  s  !  -  :  s  ",
       "T": "  d  :  m  !  -  :  m  ",
@@ -26,6 +28,7 @@ const fihirana = [
       "lyrics": "dfssdfsdfsdfsddfsddsf" 
     },
     {
+      "indication": " ",
       "S": " s.s :  d' !  -  :  d' ",
       "A": "  m  :     !  -  :  s  ",
       "T": "  d  :  m  !  -  :  m  ",

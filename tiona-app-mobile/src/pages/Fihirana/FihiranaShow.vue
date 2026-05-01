@@ -35,7 +35,7 @@ getSongDetails();
     <div class="flex flex-wrap w-[90%] m-auto">
       <div v-for="(measure, index) in fihirana.measures" :key="index">
 
-        <div class="text-[10px] text-end px-2">
+        <div class="text-[10px] text-end px-2 whitespace-pre">
           {{ measure.indication }}
         </div>
 
