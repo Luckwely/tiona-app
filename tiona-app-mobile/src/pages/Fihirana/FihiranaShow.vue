@@ -3,6 +3,7 @@ import { ref } from 'vue';
 import Fihirana from './Fihirana.vue';
 import { fetchFihiranaById } from '../../services/fihiranaData';
 import { useRoute } from 'vue-router';
+import ReturnBtn from '../../components/returnBtn.vue';
 
 const route = useRoute();
 const id = route.params.id;
@@ -20,44 +21,56 @@ getSongDetails();
 
 </script>
 <template>
-  <div class="p-6 bg-white min-h-screen font-mono text-gray-900">
-    <!-- Header info like the reference image -->
-    <div class="text-center mb-8">
-      <h1 class="text-2xl font-bold uppercase">{{ fihirana.title }}</h1>
-      <div class="flex justify-between text-xs mt-4 px-4 italic">
-        <span>Do dia Eb (p=75)</span>
-        <span>Liva RAKOTONDRATSIMBA</span>
+  <div class="pt-16 w-[90%] m-auto bg-white min-h-screen font-mono text-gray-900">
+    <!-- Header info-->
+    <div class="text-center mb-4 w-[90%] m-auto">
+      <h2 class="text-xl font-medium uppercase tracking-widest">{{ fihirana.title }}</h2>
+      <div class="flex justify-between my-2">
+        <p class="text-[13px]">Do dia Do</p>
+        <p class="text-[13px]">Liva R</p>
       </div>
     </div>
 
-    <!-- Music and Lyrics Grid -->
-    <div class="flex flex-wrap px-2">
-      <div 
-        v-for="(measure, index) in fihirana.measures" 
-        :key="index" 
-        class="flex flex-col -ml-[1px] mb-8"
-      >
-        <!-- Musical Notes -->
-        <div class="text-[13px] leading-tight tracking-tighter border-gray-400">
-          <pre class="whitespace-pre bg-white">{{ measure.s }}</pre>
-          <pre class="whitespace-pre bg-white">{{ measure.a }}</pre>
-          <pre class="whitespace-pre bg-white">{{ measure.t }}</pre>
-          <pre class="whitespace-pre bg-white">{{ measure.b }}</pre>
-        </div>
+    <!-- note and lyric -->
+    <div class="flex flex-wrap w-[90%] m-auto">
+      <div v-for="(measure, index) in fihirana.measures" :key="index">
 
-        <!-- Lyrics for this specific measure -->
+        <!-- <div class="border-x-1 text-[15px]">
+          <p class=" whitespace-pre">{{ measure.S }}</p>
+          <p class=" whitespace-pre">{{ measure.A }}</p>
+          <p class=" whitespace-pre">{{ measure.T }}</p>
+          <p class=" whitespace-pre">{{ measure.B }}</p>
+        </div> -->
+
+        <div 
+          class="border-l border-black w-fit px-1 text-[11px] leading-tight"
+          :class="{
+            'border-r-4 border-double border-black': index === fihirana.measures.length - 1,
+            'border-r border-black': index !== fihirana.measures.length - 1
+          }"
+        >
+          <p class="whitespace-pre">{{ measure.S }}</p>
+          <p class="whitespace-pre">{{ measure.A }}</p>
+          <p class="whitespace-pre">{{ measure.T }}</p>
+          <p class="whitespace-pre">{{ measure.B }}</p>
+        </div>
+      
         <div class="text-[11px] text-center mt-1 px-1 min-h-[1.5rem]">
           {{ measure.lyrics }}
         </div>
       </div>
     </div>
 
-    <!-- Traditional Lyrics (Full text below) -->
-    <div class="mt-12 border-t pt-6 space-y-4">
-       <div v-for="(verse, i) in fihirana.content" :key="i" class="flex gap-4">
-         <span class="font-bold">{{ i + 1 }}.</span>
-         <p class="italic">{{ verse }}</p>
+    <!-- Full lyrics -->
+    <div class="mt-3 columns- sm:columns-2 gap-8">
+       <div v-for="(verse, i) in fihirana.content" :key="i" class="flex gap-2 mb-6 break-inside-avoid">
+         <span class="font-bold text-[14px]">{{ i + 1 }}.</span>
+         <p class="text-[14px] whitespace-pre-line leading-relaxed">{{ verse }}</p>
        </div>
     </div>
+  </div>
+
+  <div class="fixed bottom-5 right-5 bg-amber-700 text-white rounded-full w-10 h-10 flex items-center justify-center">
+    <ReturnBtn />
   </div>
 </template>

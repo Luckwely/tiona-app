@@ -1,25 +1,52 @@
 const fihirana = [
   {
     "id": "01",
-    "title": "Ny Fanahiko",
+    "title": "FIHIRANA",
     "measures": [
     {
-      "s": "| s : d'! - : d'|",
-      "a": "| m : s ! - : s |",
-      "t": "| d : m ! - : m |",
-      "b": "| d : d ! - : d |",
-      "lyrics": "To- mpo- za- ny" // Fragment for this measure
+      "S": "  s  :  d' !  -  :  d' ",
+      "A": "  m  :  s  !  -  :  s  ",
+      "T": "  d  :  m  !  -  :  m  ",
+      "B": "  d  :  d  !  -  :  d  ",
+      "lyrics": "df" 
     },
     {
-      "s": "| s : d'! - : d'|",
-      "a": "| m : s ! - : s |",
-      "t": "| d : m ! - : m |",
-      "b": "| d : d ! - : d |",
-      "lyrics": "mba je- re- o"
-    }
+      "S": " s.s :  d' !  -  :  d' ",
+      "A": "  m  :     !  -  :  s  ",
+      "T": "  d  :  m  !  -  :  m  ",
+      "B": "  d  :  d  !  -  :  d  ",
+      "lyrics": "df"
+    },
+    {
+      "S": "  s  :  d' !  -  :  d' ",
+      "A": "  m  :  s  !  -  :  s  ",
+      "T": "  d  :  m  !  -  :  m  ",
+      "B": "  d  :  d  !  -  :  d  ",
+      "lyrics": "df" 
+    },
+    {
+      "S": " s.s :  d' !  -  :  d' ",
+      "A": "  m  :     !  -  :  s  ",
+      "T": "  d  :  m  !  -  :  m  ",
+      "B": "  d  :  d  !  -  :  d  ",
+      "lyrics": "df"
+    },
+    {
+      "S": " s.s :  d' !  -  :  d' ",
+      "A": "  m  :     !  -  :  s  ",
+      "T": "  d  :  m  !  -  :  m  ",
+      "B": "  d  :  d  !  -  :  d  ",
+      "lyrics": "df"
+    },
   ],
-    "content": ["Inot no havalko...", "Ny fo sy ny aiko..."]
-  }
+    "content": [
+      "dfdfgfgdfgdfddgfdfgfdgfd \n fdgdffghgfhgffggdf \n dfghgfgfdgfd", 
+      "dfdfd \n fdgdffghfghgfh \n dgffghfghdgfd", 
+      "dffghdfd \n fdgdfgdf \n dgfghgfgfdgfd", 
+      "dfdfd \n fdgdfgdf \n dgfdgfd", 
+      "dfdfd \n fdgdfgdf \n dgfdgfd", 
+    ]
+  },
 ];
 
 export function fetchFihirana() {

@@ -12,7 +12,7 @@ import FihiranaShow from '../pages/Fihirana/FihiranaShow.vue'
 
 
 const routes = [
-  { path: '/fihirana', component: Fihirana },
+  { path: '/', component: Fihirana },
   { path: '/fihirana/show/:id', component: FihiranaShow },
   { path: '/haa', component: Haa},
   { path: '/tsanta', component: Tsanta},
