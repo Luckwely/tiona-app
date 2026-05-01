@@ -21,7 +21,7 @@ getSongDetails();
 
 </script>
 <template>
-  <div class="pt-16 w-[90%] m-auto bg-white min-h-screen font-mono text-gray-900">
+  <div class="pt-20 w-[90%] m-auto bg-white min-h-screen font-mono text-gray-900">
     <!-- Header info-->
     <div class="text-center mb-4 w-[90%] m-auto">
       <h2 class="text-xl font-medium uppercase tracking-widest">{{ fihirana.title }}</h2>
@@ -35,12 +35,9 @@ getSongDetails();
     <div class="flex flex-wrap w-[90%] m-auto">
       <div v-for="(measure, index) in fihirana.measures" :key="index">
 
-        <!-- <div class="border-x-1 text-[15px]">
-          <p class=" whitespace-pre">{{ measure.S }}</p>
-          <p class=" whitespace-pre">{{ measure.A }}</p>
-          <p class=" whitespace-pre">{{ measure.T }}</p>
-          <p class=" whitespace-pre">{{ measure.B }}</p>
-        </div> -->
+        <div class="text-[10px] text-end px-2">
+          {{ measure.indication }}
+        </div>
 
         <div 
           class="border-l border-black w-fit px-1 text-[11px] leading-tight"
@@ -63,14 +60,14 @@ getSongDetails();
 
     <!-- Full lyrics -->
     <div class="mt-3 columns- sm:columns-2 gap-8">
-       <div v-for="(verse, i) in fihirana.content" :key="i" class="flex gap-2 mb-6 break-inside-avoid">
-         <span class="font-bold text-[14px]">{{ i + 1 }}.</span>
-         <p class="text-[14px] whitespace-pre-line leading-relaxed">{{ verse }}</p>
+       <div v-for="(verse, i) in fihirana.content" :key="i" class="flex gap-1 mb-6 break-inside-avoid items-baseline">
+         <span class="font-bold text-[11px]">{{ i + 1 }}.</span>
+         <p class="text-[13px] whitespace-pre-line leading-relaxed tracking-widest">{{ verse }}</p>
        </div>
     </div>
   </div>
 
-  <div class="fixed bottom-5 right-5 bg-amber-700 text-white rounded-full w-10 h-10 flex items-center justify-center">
+  <div class="fixed bottom-5 right-10 bg-amber-700 text-white rounded-full w-10 h-10 flex items-center justify-center">
     <ReturnBtn />
   </div>
 </template>

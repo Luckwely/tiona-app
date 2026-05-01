@@ -10,26 +10,29 @@ const handClick = () => {
 </script>
 
 <template>
-    <nav class="flex justify-between items-center bg-blue-200 px-4 py-4 fixed w-full top-0">
-        <div class="flex gap-2 items-center">
-            <div>
-                <i class="pi pi-book"></i>
+    <nav class="flex justify-between items-center bg-gradient-to-r from-slate-900 via-indigo-950 to-cyan-800 text-white px-4 py-2 fixed w-full top-0 shadow-2xl z-20 font-sans">
+        <div class="flex items-center gap-3">
+            <div class="text-3xl">𝄞</div>
+            <div class="">
+                <h2 class="text-lg font-semibold tracking-[0.3em]">TIONA</h2>
+                <p class="text-xs uppercase tracking-[0.32em] text-cyan-200/80 -mt-1">E.E.M</p>
             </div>
-            <h2>TIONA</h2>
         </div>
         <div>
-            <div @click.prevent="handClick">
+            <button @click.prevent="handClick" class="text-xl rounded-full bg-white/10 w-10 h-10 flex items-center justify-center hover:bg-white/20 transition">
                 <i class="pi pi-bars"></i>
-            </div>
+            </button>
         </div>
     </nav>
     <Transition name="slide">
-        <div v-if="menuBar" class="pl-5 h-full w-[60%] py-5 z-30 fixed top-0 right-0 bg-white/80 backdrop-blur-md shadow-xl">
-            <button @click="handClick" class="mb-6"><i class="pi pi-times"></i></button>
-            <div class="flex flex-col gap-4">
-                <RouterLink to="/" class="hover:text-blue-600 transition" @click="menuBar = false">FIHIRANA</RouterLink>
-                <RouterLink to="/haa" class="hover:text-blue-600 transition" @click="menuBar = false">HAA</RouterLink>
-                <RouterLink to="/tsanta" class="hover:text-blue-600 transition" @click="menuBar = false">TSANTA</RouterLink>
+        <div v-if="menuBar" class="pl-6 h-full w-[65%] py-6 z-30 fixed top-0 right-0 bg-white/95 backdrop-blur-md shadow-2xl">
+            <button @click="handClick" class="mb-6 text-slate-900 hover:text-cyan-700">
+                <i class="pi pi-times text-2xl"></i>
+            </button>
+            <div class="flex flex-col gap-5 text-slate-900 text-base font-medium">
+                <RouterLink to="/" class="hover:text-cyan-700 transition" @click="menuBar = false">FIHIRANA</RouterLink>
+                <RouterLink to="/haa" class="hover:text-cyan-700 transition" @click="menuBar = false">HAA</RouterLink>
+                <RouterLink to="/tsanta" class="hover:text-cyan-700 transition" @click="menuBar = false">TSANTA</RouterLink>
             </div>
         </div>
     </Transition>

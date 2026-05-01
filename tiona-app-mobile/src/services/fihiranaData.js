@@ -1,42 +1,44 @@
 const fihirana = [
   {
-    "id": "01",
+    "id": "1",
     "title": "FIHIRANA",
     "measures": [
     {
+      "indication": "",
       "S": "  s  :  d' !  -  :  d' ",
       "A": "  m  :  s  !  -  :  s  ",
       "T": "  d  :  m  !  -  :  m  ",
       "B": "  d  :  d  !  -  :  d  ",
-      "lyrics": "df" 
+      "lyrics": "dsdsdfsdfsdfsdsdf" 
     },
     {
       "S": " s.s :  d' !  -  :  d' ",
       "A": "  m  :     !  -  :  s  ",
       "T": "  d  :  m  !  -  :  m  ",
       "B": "  d  :  d  !  -  :  d  ",
-      "lyrics": "df"
+      "lyrics": "dsfsdfsdfsdfsdsdfsdf"
     },
     {
       "S": "  s  :  d' !  -  :  d' ",
       "A": "  m  :  s  !  -  :  s  ",
       "T": "  d  :  m  !  -  :  m  ",
       "B": "  d  :  d  !  -  :  d  ",
-      "lyrics": "df" 
+      "lyrics": "dfssdfsdfsdfsddfsddsf" 
     },
     {
       "S": " s.s :  d' !  -  :  d' ",
       "A": "  m  :     !  -  :  s  ",
       "T": "  d  :  m  !  -  :  m  ",
       "B": "  d  :  d  !  -  :  d  ",
-      "lyrics": "df"
+      "lyrics": "dsdfsdfsdfsdfdssdfsdf"
     },
     {
+      "indication": "DC",
       "S": " s.s :  d' !  -  :  d' ",
       "A": "  m  :     !  -  :  s  ",
       "T": "  d  :  m  !  -  :  m  ",
       "B": "  d  :  d  !  -  :  d  ",
-      "lyrics": "df"
+      "lyrics": "dsdfsdfsdfsdfsdfdfsdf"
     },
   ],
     "content": [

@@ -7,9 +7,9 @@ import InputText from 'primevue/inputtext';
 const text1 = ref('');
 </script>
 <template>
-    <div class="mx-4 my-2 pt-15">
+    <div>
         <InputGroup class="border-1 rounded-xl">
-            <InputGroupAddon class="my-2">
+            <InputGroupAddon class="my-2 bg-transparent">
                 <i class="pi pi-search"></i>
             </InputGroupAddon>
             <InputText v-model="text1" placeholder="Search here..." class="py-2 px-1 border-none outline-none" />
