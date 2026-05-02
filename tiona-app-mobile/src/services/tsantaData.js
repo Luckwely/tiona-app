@@ -1,7 +1,7 @@
-const fihirana = [
+const tsanta = [
   {
     "id": "1",
-    "title": "FIHIRANA",
+    "title": "TSANTA",
     "measures": [
     {
       "indication": " ",
@@ -143,14 +143,14 @@ const fihirana = [
 
 import { searchSongs } from './searchUtils';
 
-export function fetchFihirana() {
-    return fihirana; 
+export function fetchTsanta() {
+    return tsanta; 
 }
 
-export function fetchFihiranaById(id) {
-    return fihirana.find(song => song.id === id);
+export function fetchTsantaById(id) {
+    return tsanta.find(song => song.id === id);
 }
 
-export function searchFihirana(query) {
-    return searchSongs(fihirana, query);
+export function searchTsanta(query) {
+    return searchSongs(tsanta, query);
 }

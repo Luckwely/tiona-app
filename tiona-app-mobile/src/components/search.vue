@@ -1,10 +1,15 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 import InputGroup from 'primevue/inputgroup';
 import InputGroupAddon from 'primevue/inputgroupaddon';
 import InputText from 'primevue/inputtext';
 
+const emit = defineEmits(['update:search']);
 const text1 = ref('');
+
+watch(text1, (value) => {
+    emit('update:search', value);
+});
 </script>
 <template>
     <div>

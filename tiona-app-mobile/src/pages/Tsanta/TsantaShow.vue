@@ -1,25 +1,25 @@
 <script setup>
 import { ref, computed } from 'vue';
-import { fetchFihiranaById } from '../../services/fihiranaData';
+import { fetchTsantaById } from '../../services/tsantaData';
 import { useRoute } from 'vue-router';
 import ReturnBtn from '../../components/returnBtn.vue';
 
 const route = useRoute();
 const id = route.params.id;
-const fihirana = ref({});
+const tsanta = ref({});
 
 function getSongDetails() {
-    const data = fetchFihiranaById(id);
-    if (data) fihirana.value = data;
+    const data = fetchTsantaById(id);
+    if (data) tsanta.value = data;
 }
 
 getSongDetails();
 
 // Find the widest measure by character count across all voice parts
 const measureWidth = computed(() => {
-    if (!fihirana.value.measures) return 80;
+    if (!tsanta.value.measures) return 80;
     let maxLen = 0;
-    for (const measure of fihirana.value.measures) {
+    for (const measure of tsanta.value.measures) {
         for (const voice of ['S', 'A', 'T', 'B']) {
             if (measure[voice]?.length > maxLen) maxLen = measure[voice].length;
         }
@@ -33,7 +33,7 @@ const measureWidth = computed(() => {
   <div class="pt-20 w-[90%] m-auto bg-white min-h-screen font-mono text-gray-900">
     <!-- Header info-->
     <div class="text-center mb-1 w-[95%] m-auto">
-      <h2 class="text-xl font-medium uppercase tracking-widest">{{ fihirana.title }}</h2>
+      <h2 class="text-xl font-medium uppercase tracking-widest">{{ tsanta.title }}</h2>
       <div class="flex justify-between my-2">
         <p class="text-[13px]">Do dia Do</p>
         <p class="text-[13px]">Liva R</p>
@@ -43,7 +43,7 @@ const measureWidth = computed(() => {
     <!-- note and lyric -->
     <div class="flex flex-wrap w-[95%] m-auto">
       <div
-        v-for="(measure, index) in fihirana.measures"
+        v-for="(measure, index) in tsanta.measures"
         :key="index"
         class="flex flex-col"
         :style="{ width: measureWidth + 'px' }"
@@ -55,8 +55,8 @@ const measureWidth = computed(() => {
         <div
           class="border-l border-black px-1 text-[12px] leading-tight w-full"
           :class="{
-            'border-r-4 border-double border-black': index === fihirana.measures.length - 1,
-            'border-r border-black': index !== fihirana.measures.length - 1
+            'border-r-4 border-double border-black': index === tsanta.measures.length - 1,
+            'border-r border-black': index !== tsanta.measures.length - 1
           }"
         >
           <p class="whitespace-pre text-center">{{ measure.S }}</p>
@@ -69,7 +69,7 @@ const measureWidth = computed(() => {
 
     <!-- Full lyrics -->
     <div class="mt-4 sm:columns-2 gap-8">
-       <div v-for="(verse, i) in fihirana.content" :key="i" class="flex gap-1 mb-3 break-inside-avoid items-baseline">
+       <div v-for="(verse, i) in tsanta.content" :key="i" class="flex gap-1 mb-3 break-inside-avoid items-baseline">
          <span class="font-bold text-[11px]">{{ i + 1 }}.</span>
          <p class="text-[12px] whitespace-pre-line leading-relaxed tracking-widest">{{ verse }}</p>
        </div>
