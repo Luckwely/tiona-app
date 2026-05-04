@@ -65,6 +65,9 @@ const measureWidth = computed(() => {
           <p class="whitespace-pre text-center">{{ measure.T }}</p>
           <p class="whitespace-pre text-center">{{ measure.B }}</p>
         </div>
+        <div
+          class=" px-1 text-[12px] leading-tight w-full text-center"
+        >{{ measure.lyrics}}</div>
       </div>
     </div>
 

@@ -1,143 +1,183 @@
 const haa = [
   {
     "id": "1",
-    "title": "HAA",
+    "title": "Ambony lanao",
+    "key": "Do dia F",
+    "author": "Pete Sanchez",
     "measures": [
     {
       "indication": " ",
-      "S": "d .d :m.m",
-      "A": "s,.s,:d.d",
-      "T": "m .m :s.s",
-      "B": "d .d :d.d",
-      "lyrics": "" 
+      "S": "   : -.s,| d : m ",
+      "A": "",
+      "T": "",
+      "B": "",
+      "lyrics": "  ---  Am- bo- nyIa-" 
     },
     {
       "indication": " ",
-      "S": " r : d ",
-      "A": " t,: s,",
-      "T": " f : m ",
-      "B": " s,: d ",
-      "lyrics": "" 
+      "S": " f : - | - : m ",
+      "A": "",
+      "T": "",
+      "B": "",
+      "lyrics": "nao --------   ry" 
     },
     {
       "indication": " ",
-      "S": "d'.d:s.m",
-      "A": "m .m:d.d",
-      "T": "s .s:m.s",
-      "B": "d .d:m.d",
-      "lyrics": "" 
+      "S": " r : -.s, | t,.d : -.r ",
+      "A": "",
+      "T": "",
+      "B": "",
+      "lyrics": "Tompo - Ambonin' -ny" 
     },
     {
       "indication": " ",
-      "S": " l : s ",
-      "A": "d.r: m ",
-      "T": "l.t: d'",
-      "B": " f : d ",
-      "lyrics": "" 
+      "S": " m : - | m : r ",
+      "A": "",
+      "T": "",
+      "B": "",
+      "lyrics": "ta -- ny re" 
     },
     {
       "indication": " ",
-      "S": "s.s:f.m",
-      "A": "m.m:r.d",
-      "T": "m.m:f.s",
-      "B": "d.d:r.m",
-      "lyrics": "" 
+      "S": " d : - | d.r : -.m ",
+      "A": "",
+      "T": "",
+      "B": "",
+      "lyrics": "hetra -- Ambo - nin'" 
     },
     {
       "indication": " ",
-      "S": "l.l:s .s",
-      "A": "d.r:m .m",
-      "T": "l.t:d'.m",
-      "B": "f.f:d .d",
-      "lyrics": "" 
+      "S": " f : f | f : f.m ",
+      "A": "",
+      "T": "",
+      "B": "",
+      "lyrics": "ny An- ndria - ma - ni" 
+    },
+    {
+      "indication": " ----- 1 ------- ",
+      "S": " r : - | d : l, ",
+      "A": "",
+      "T": "",
+      "B": "",
+      "lyrics": "tra -- re -- --" 
+    },
+    {
+      "indication": " --------------------- ",
+      "S": " s : - | - : - ",
+      "A": "",
+      "T": "",
+      "B": "",
+      "lyrics": "he -- -- -- --" 
     },
     {
       "indication": " ",
-      "S": "f.m:r .d ",
-      "A": "r.d:l,.l,",
-      "T": "f.s:l .l ",
-      "B": "r.m:f .fi",
-      "lyrics": "" 
+      "S": " s : .s,| d : m ",
+      "A": "",
+      "T": "",
+      "B": "",
+      "lyrics": "tra Am no nyHia" 
     },
     {
       "indication": " ",
-      "S": "t, :  - ",
-      "A": "s, :  - ",
-      "T": "s  :  - ",
-      "B": "r.m:f.fi",
-      "lyrics": "" 
+      "S": " r : - | - : d ",
+      "A": "",
+      "T": "",
+      "B": "",
+      "lyrics": "tra -- -- -- re" 
     },
     {
       "indication": " ",
-      "S": "m.m:r .r ",
-      "A": "d.d:t,.t,",
-      "T": "s.s:f .f ",
-      "B": "d.d:s,.s,",
-      "lyrics": "" 
+      "S": " d : - | - : - ",
+      "A": "",
+      "T": "",
+      "B": "",
+      "lyrics": "he -- -- -- " 
     },
     {
       "indication": " ",
-      "S": " d : d ",
-      "A": " l,: l,",
-      "T": " m : m ",
-      "B": " l,: l,",
-      "lyrics": "" 
+      "S": " d : - | s : s ",
+      "A": "",
+      "T": "",
+      "B": "",
+      "lyrics": "tra -- A sa " 
     },
     {
       "indication": " ",
-      "S": "d'.d': s.m",
-      "A": "m .m : d.d",
-      "T": "m .m : s.s",
-      "B": "d .d : m.d",
-      "lyrics": "" 
+      "S": " s, : -.s | s : - ",
+      "A": "",
+      "T": "",
+      "B": "",
+      "lyrics": "dra -- troIa- nao" 
     },
     {
       "indication": " ",
-      "S": "l  : s ",
-      "A": "d.r: m ",
-      "T": "l.t: d ",
-      "B": "f  : d ",
-      "lyrics": "" 
+      "S": " - : - | s : s ",
+      "A": "",
+      "T": "",
+      "B": "",
+      "lyrics": "-- -- A- san" 
     },
     {
       "indication": " ",
-      "S": "d . r : m ",
-      "A": "s,.t, : d ",
-      "T": "s . f : m ",
-      "B": "m . r : d ",
-      "lyrics": "" 
+      "S": " s : -.s | s : - ",
+      "A": "",
+      "T": "",
+      "B": "",
+      "lyrics": "dra troIa - nao" 
     },
     {
       "indication": " ",
-      "S": " f : m ",
-      "A": " r : d ",
-      "T": " r : m ",
-      "B": " t,: d ",
-      "lyrics": "" 
+      "S": " - : - | s : s ",
+      "A": "",
+      "T": "",
+      "B": "",
+      "lyrics": "-- -- A- nao" 
     },
     {
       "indication": " ",
-      "S": "m . r:d . t",
-      "A": "d .l,:s,.f,",
-      "T": "s . f:m . r",
-      "B": "m,.f,:s,.s,",
-      "lyrics": "" 
+      "S": " s : -.f | f : - ",
+      "A": "",
+      "T": "",
+      "B": "",
+      "lyrics": "dra troIa - nao" 
     },
     {
       "indication": " ",
-      "S": "d : -",
-      "A": "m, : -",
-      "T": "d : -",
-      "B": "d, : -",
-      "lyrics": "" 
+      "S": " - : - | m : s ",
+      "A": "",
+      "T": "",
+      "B": "",
+      "lyrics": "-- -- Tom -po" 
     },
+    {
+      "indication": " --------- 1 -------",
+      "S": " s : - | - : - ",
+      "A": "",
+      "T": "",
+      "B": "",
+      "lyrics": "ô -- -- --" 
+    },
+    {
+      "indication": " ",
+      "S": " - : - | s : s ",
+      "A": "",
+      "T": "",
+      "B": "",
+      "lyrics": "-- -- A- san" 
+    },
+    {
+      "indication": " ------ 2 ------ ",
+      "S": " m.r.d : - | - : - ",
+      "A": "",
+      "T": "",
+      "B": "",
+      "lyrics": "ô -- -- --" 
+    },
+
   ],
-    "content": [
-      "Andriananahary masina indrindra!  \n Na tsy hita aza izao ny voninahitrao! \n Masina indrindra Hianao irery, \n Andriananahary, Telo I zay Iray", 
-      "Zava-manana aina samy mankalaza \n Sady manamabara Anao I zay Tompony izao \n Hianao irery no mitahy azy \n Andria nanahary, Telo I zay Iray", 
-      "Andria nanahary feno hatsarana \n He, ny fitahianao izay mpanomponao   \n Tsara dia tsara ny omenao azy, \n Andria nanahary, Telo I zay Iray", 
-      "Andria nanahary masina indrindra! \n Izahay mpanomponao ta-hankalaza Anao \n Feno fahendrena, feno fiantrana \n Andria nanahary, Telo I zay Iray", 
-    ]
+    // "content": [
+    //   "", 
+    // ]
   },
 ];
 
