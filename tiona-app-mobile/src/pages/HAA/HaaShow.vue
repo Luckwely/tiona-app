@@ -36,8 +36,8 @@ const measureWidth = computed(() => {
     <div class="text-center mb-1 w-[95%] m-auto">
       <h2 class="text-xl font-medium uppercase tracking-widest">{{ haa.title }}</h2>
       <div class="flex justify-between my-2">
-        <p class="text-[13px]">Do dia Do</p>
-        <p class="text-[13px]">Liva R</p>
+        <p class="text-[13px]">{{ haa.key }}</p>
+        <p class="text-[13px]">{{ haa.author }}</p>
       </div>
     </div>
 
@@ -74,7 +74,7 @@ const measureWidth = computed(() => {
     <!-- Full lyrics -->
     <div class="mt-4 sm:columns-2 gap-8">
        <div v-for="(verse, i) in haa.content" :key="i" class="flex gap-1 mb-3 break-inside-avoid items-baseline">
-         <span class="font-bold text-[11px]">{{ i + 1 }}.</span>
+         <span class="font-bold text-[11px]">{{ i + 2 }}.</span>
          <p class="text-[12px] whitespace-pre-line leading-relaxed tracking-widest">{{ verse }}</p>
        </div>
     </div>
