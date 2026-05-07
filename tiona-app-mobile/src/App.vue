@@ -1,7 +1,12 @@
 <script setup>
+import { RouterView } from 'vue-router';
+import Nav from './components/nav.vue';
 
 </script>
 
-<template>
-  <h1>Hello world!!!</h1>
+<template> 
+  <Nav />
+  <main>
+    <RouterView />
+  </main>
 </template>
