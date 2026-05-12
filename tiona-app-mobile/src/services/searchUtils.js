@@ -1,5 +1,5 @@
-export function searchSongs(songs, query) {
-    if (!query || !query.trim()) {
+export function searchSongs(query, songs = []) {
+    if (typeof query !== 'string' || !query.trim()) {
         return songs;
     }
 

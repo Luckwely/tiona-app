@@ -5,12 +5,19 @@ import Search from '../../components/search.vue';
 
 const searchQuery = ref('');
 const tsanta = ref([]);
+const isLoading = ref(true);
 
-onMounted(() => {
-    tsanta.value = fetchTsanta();
+onMounted(async () => {
+    try {
+        tsanta.value = await fetchTsanta();
+    } catch (error) {
+        console.error('Error loading TSANTA data:', error);
+    } finally {
+        isLoading.value = false;
+    }
 });
 
-const filteredTsanta = computed(() => searchTsanta(searchQuery.value));
+const filteredTsanta = computed(() => searchTsanta(searchQuery.value, tsanta.value));
 </script>
 
 <template>

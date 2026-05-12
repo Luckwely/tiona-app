@@ -5,12 +5,19 @@ import Search from '../../components/search.vue';
 
 const searchQuery = ref('');
 const fihirana = ref([]);
+const isLoading = ref(true);
 
-onMounted(() => {
-    fihirana.value = fetchFihirana();
+onMounted(async () => {
+    try {
+        fihirana.value = await fetchFihirana();
+    } catch (error) {
+        console.error('Error loading FIHIRANA data:', error);
+    } finally {
+        isLoading.value = false;
+    }
 });
 
-const filteredFihirana = computed(() => searchFihirana(searchQuery.value));
+const filteredFihirana = computed(() => searchFihirana(searchQuery.value, fihirana.value));
 </script>
 
 <template>

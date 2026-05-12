@@ -5,12 +5,19 @@ import Search from '../../components/search.vue';
 
 const searchQuery = ref('');
 const haa = ref([]);
+const isLoading = ref(true);
 
-onMounted(() => {
-    haa.value = fetchHaa();
+onMounted(async () => {
+    try {
+        haa.value = await fetchHaa();
+    } catch (error) {
+        console.error('Error loading HAA data:', error);
+    } finally {
+        isLoading.value = false;
+    }
 });
 
-const filteredHaa = computed(() => searchHaa(searchQuery.value));
+const filteredHaa = computed(() => searchHaa(searchQuery.value, haa.value));
 </script>
 
 <template>
