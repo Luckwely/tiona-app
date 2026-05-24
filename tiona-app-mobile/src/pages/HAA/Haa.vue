@@ -27,11 +27,11 @@ const goToSong = (id) => {
   <Nav />
   <div class="p-4 max-w-md mx-auto bg-gray-50 min-h-screen pb-20">
 
-    <div class="mt-12 mb-2">
+    <div class="fixed top-[56px] left-0 right-0 z-10 bg-gray-50 px-4 py-3 max-w-md mx-auto border-b border-gray-100">
       <SearchBar v-model:search="searchQuery" />
     </div>
 
-    <div v-if="filteredSongs.length > 0" class="flex flex-col gap-1">
+    <div v-if="filteredSongs.length > 0" class="flex flex-col gap-1 mt-27">
       <div 
         v-for="song in filteredSongs" 
         :key="song.id" 
@@ -52,6 +52,6 @@ const goToSong = (id) => {
     <div v-else class="text-center py-12 text-gray-400">
       Chargement du répertoire...
     </div>
+    
   </div>
 </template>
-

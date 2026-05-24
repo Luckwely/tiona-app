@@ -40,8 +40,25 @@ export const getSongById = async (id) => {
     if (!data) return null;
     
     for (const category in data) {
-        const song = data[category].find(s => s.id === parseInt(id));
-        if (song) return song;
+        if (Array.isArray(data[category])) {
+            const song = data[category].find(s => s.id === parseInt(id));
+            if (song) return song;
+        }
     }
     return null;
+};
+
+/**
+ * NOUVEAU : Cherche un chant spécifique par son ID ET sa catégorie
+ * Évite les conflits d'IDs identiques entre les différents recueils
+ */
+export const getSongByCategoryAndId = async (category, id) => {
+    const data = await loadJsonData();
+    if (!data) return null;
+
+    // Récupère uniquement le tableau du recueil demandé
+    const categorySongs = data[category.toLowerCase()] || [];
+    
+    // Trouve le chant avec l'ID correspondant
+    return categorySongs.find(song => song.id === parseInt(id)) || null;
 };
