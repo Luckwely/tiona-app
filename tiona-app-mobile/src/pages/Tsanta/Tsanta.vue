@@ -1,51 +1,57 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue';
-import { fetchTsanta, searchTsanta } from '../../services/tsantaData';
-import Search from '../../components/search.vue';
+import { useRouter } from 'vue-router';
+import { getSongsByCategory } from '../../services/songService';
+import { searchSongs } from '../../composables/searchUtils';
+import Nav from '../../components/nav.vue';
+import SearchBar from '../../components/search.vue';
 
+const router = useRouter();
+const songs = ref([]);
 const searchQuery = ref('');
-const tsanta = ref([]);
-const isLoading = ref(true);
 
 onMounted(async () => {
-    try {
-        tsanta.value = await fetchTsanta();
-    } catch (error) {
-        console.error('Error loading TSANTA data:', error);
-    } finally {
-        isLoading.value = false;
-    }
+  songs.value = await getSongsByCategory('tsanta');
 });
 
-const filteredTsanta = computed(() => searchTsanta(searchQuery.value, tsanta.value));
+const filteredSongs = computed(() => {
+  return searchSongs(searchQuery.value, songs.value);
+});
+
+const goToSong = (id) => {
+  router.push(`/tsanta/show/${id}`);
+};
 </script>
 
 <template>
-    <div class="min-h-screen bg-slate-950/5 py-6">
+  <Nav />
+  <div class="p-4 max-w-md mx-auto bg-gray-50 min-h-screen pb-20">
 
-        <div class="rounded-[28px] bg-white/10 border border-white/10 shadow-inner backdrop-blur-xl mt-10 mx-2">
-            <Search v-model:search="searchQuery" />
-        </div>
-
-        <div class="mx-2 mt-5">
-            <div v-if="filteredTsanta.length === 0" class="rounded-[28px] bg-white/90 border border-slate-200/20 p-8 text-center text-slate-600">
-                No results found.
-            </div>
-
-            <div v-else class="grid gap-1 md:grid-cols-2 xl:grid-cols-3">
-                <div v-for="song in filteredTsanta" :key="song.id" class="group">
-                    <RouterLink :to="`/tsanta/show/${song.id}`" class="block overflow-hidden rounded-[28px] border border-slate-200/10 bg-white/90 py-1 shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:bg-white">
-                        <div class="flex items-center justify-between gap-3">
-                            <div>
-                                <p class="text-[15px] tracking-widest pl-4 font-semibold text-slate-950">{{ song.title }}</p>
-                            </div>
-                            <div class="flex h-10 w-10 items-center justify-center rounded-3xl bg-cyan-700 text-white text-lg font-bold shadow-md">
-                                {{ song.id }}
-                            </div>
-                        </div>
-                    </RouterLink>
-                </div>
-            </div>
-        </div>
+    <div class="mt-12 mb-2">
+      <SearchBar v-model:search="searchQuery" />
     </div>
+
+    <div v-if="filteredSongs.length > 0" class="flex flex-col gap-1">
+      <div 
+        v-for="song in filteredSongs" 
+        :key="song.id" 
+        class="pl-4 pr-2 py-2 bg-white shadow-sm rounded-full border border-gray-100 cursor-pointer active:scale-98 transition-all hover:border-blue-200 flex items-center justify-between"
+        @click="goToSong(song.id)"
+      >
+        <span class="font-medium text-gray-800 text-base line-clamp-1">{{ song.title }}</span>
+        <span class="font-bold text-lg text-blue-100 bg-cyan-800 w-10 h-10 flex items-center justify-center rounded-full min-w-[45px] text-center rounded-full">
+          {{ song.number }}
+        </span>
+      </div>
+    </div>
+
+    <div v-else-if="searchQuery" class="text-center py-12 text-gray-400">
+      Aucun chant ne correspond à votre recherche 😕
+    </div>
+    
+    <div v-else class="text-center py-12 text-gray-400">
+      Chargement du répertoire...
+    </div>
+  </div>
 </template>
+

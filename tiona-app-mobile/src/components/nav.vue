@@ -1,11 +1,25 @@
 <script setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
+import { useRoute } from "vue-router";
 
+const route = useRoute();
 const menuBar = ref(false);
 
 const handClick = () => {
     menuBar.value = !menuBar.value;
 }
+
+const currentSubtitle = computed(() => {
+    const path = route.path.toLowerCase();
+
+    if (path.startsWith('/haa')) {
+        return 'HANANDRATRA ANAO AHO';
+    }else if (path.startsWith('/tsanta')) {
+        return 'TSANTA';
+    }else {
+        return "FIHIRANA";
+    }
+});
 
 </script>
 
@@ -15,7 +29,7 @@ const handClick = () => {
             <div class="text-3xl">𝄞</div>
             <div class="">
                 <h2 class="text-lg font-semibold tracking-[0.3em]">TIONA</h2>
-                <p class="text-xs uppercase tracking-[0.32em] text-cyan-200/80 -mt-1">E.E.M</p>
+                <p class="text-xs uppercase tracking-[0.32em] text-cyan-200/80 -mt-1">{{ currentSubtitle }}</p>
             </div>
         </div>
         <div>

@@ -12,7 +12,7 @@
     "@capacitor-community/sqlite": "^8.1.0",
     "@capacitor/android": "^8.3.1",
     "@primeuix/themes": "^2.0.3",
-    "@tailwindcss/vite": "^4.2.4",
+    "@tailwindcss/vite": "^4.3.0",
     "flowbite": "^4.0.1",
     "jeep-sqlite": "^2.8.0",
     "primeicons": "^7.0.0",

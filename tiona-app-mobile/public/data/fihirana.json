@@ -1,0 +1,20 @@
+{
+  "fihirana": [
+    { "id": 1001, "number": 1, "title": "Ry Tompo Ray, Mpamorona", "pdfPath": "/songs/fihirana/song_1.pdf" },
+    { "id": 1002, "number": 2, "title": "Miderà an'i Jehovah", "pdfPath": "/songs/fihirana/song_2.pdf" }
+  ],
+  "haa": [
+    { "id": 2001, "number": 1, "title": "Haja no an'ny Avo (1)", "pdfPath": "/songs/haa/haa_1.pdf" },
+    { "id": 2002, "number": 2, "title": "Aoka hiseho...", "pdfPath": "/songs/haa/haa_2.pdf" }
+  ],
+  "tsanta": [
+    { "id": 3001, "number": 1, "title": "Ambony Ianao", "pdfPath": "/songs/tsanta/tsanta_1.pdf" },
+    { "id": 3002, "number": 2, "title": "Andriamanitra e! Mahagaga", "pdfPath": "/songs/tsanta/tsanta_2.pdf" }
+  ],
+  "antema": [],
+  "fihirana_fanampiny": [],
+  "categorie_6": [],
+  "categorie_7": [],
+  "categorie_8": [],
+  "categorie_9": []
+}

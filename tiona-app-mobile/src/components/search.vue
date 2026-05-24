@@ -13,7 +13,7 @@ watch(text1, (value) => {
 </script>
 <template>
     <div>
-        <InputGroup class="border-1 rounded-xl">
+        <InputGroup class="border-1 rounded-full">
             <InputGroupAddon class="my-2 bg-transparent">
                 <i class="pi pi-search"></i>
             </InputGroupAddon>
