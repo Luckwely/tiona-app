@@ -15,13 +15,15 @@
     "@tailwindcss/vite": "^4.3.0",
     "flowbite": "^4.0.1",
     "jeep-sqlite": "^2.8.0",
+    "pdfjs-dist": "^5.7.284",
     "primeicons": "^7.0.0",
     "primevue": "^4.5.5",
-    "tailwindcss": "^4.2.4",
-    "vue": "^3.5.32"
+    "tailwindcss": "^4.3.0",
+    "vue": "^3.5.32",
+    "vue-pdf-embed": "^2.1.4"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.2.1",
+    "@vitejs/plugin-vue": "^5.2.4",
     "vite": "^6.0.0"
   }
 }
