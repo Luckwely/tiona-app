@@ -28,7 +28,7 @@ const currentSubtitle = computed(() => {
         <div class="flex items-center gap-3">
             <div class="text-3xl">𝄞</div>
             <div class="">
-                <h2 class="text-lg font-semibold tracking-[0.3em]">TIONA</h2>
+                <h2 class="text-lg font-semibold tracking-[0.3em]">TIONA ANGLIKANA</h2>
                 <p class="text-xs uppercase tracking-[0.32em] text-cyan-200/80 -mt-1">{{ currentSubtitle }}</p>
             </div>
         </div>

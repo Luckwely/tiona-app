@@ -11,7 +11,7 @@ const songs = ref([]);
 const searchQuery = ref('');
 
 onMounted(async () => {
-  songs.value = await getSongsByCategory('tsanta');
+  songs.value = await getSongsByCategory('haa');
 });
 
 const filteredSongs = computed(() => {
@@ -19,15 +19,15 @@ const filteredSongs = computed(() => {
 });
 
 const goToSong = (id) => {
-  router.push(`/tsanta/show/${id}`);
+  router.push(`/haa/show/${id}`);
 };
 </script>
 
 <template>
   <Nav />
-  <div class="p-4 max-w-md mx-auto bg-gray-50 min-h-screen pb-20">
+  <div class="p-4 w-full mx-auto bg-gray-50 min-h-screen pb-20">
 
-    <div class="fixed top-[56px] left-0 right-0 z-10 bg-gray-50 px-4 py-3 max-w-md mx-auto border-b border-gray-100">
+    <div class="fixed top-[56px] left-0 right-0 z-10 bg-gray-50 px-4 py-3 w-full mx-auto border-b border-gray-100">
       <SearchBar v-model:search="searchQuery" />
     </div>
 
