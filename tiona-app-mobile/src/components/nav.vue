@@ -26,7 +26,7 @@ const currentSubtitle = computed(() => {
 <template>
     <nav class="flex justify-between items-center bg-gradient-to-r from-slate-900 via-indigo-950 to-cyan-800 text-white px-4 py-2 fixed w-full top-0 shadow-2xl z-20 font-sans">
         <div class="flex items-center gap-2">
-            <div class="text-xl">𝄞</div>
+            <div class="text-3xl">𝄞</div>
             <div class="">
                 <h2 class="text-lg font-semibold tracking-[0.3em]">TIONA ANGLIKANA</h2>
                 <p class="text-xs uppercase tracking-[0.32em] text-cyan-200/80 -mt-1">{{ currentSubtitle }}</p>

@@ -5,7 +5,11 @@
   ],
   "haa": [
     { "id": 1, "number": 1, "title": "Ambony Ianao", "pdfPath": "/songs/haa/haa - 1.pdf" },
-    { "id": 2, "number": 2, "title": "Aoka hiseho...", "pdfPath": "/songs/haa/haa - 2.pdf" }
+    { "id": 2, "number": 2, "title": "Andriamanitra e! Mahagaga", "pdfPath": "/songs/haa/haa - 2.pdf" },
+    { "id": 3, "number": 3, "title": "Aoka hiseho ny voninahitry ny Ray", "pdfPath": "/songs/haa/haa - 3.pdf" },
+    { "id": 4, "number": 4, "title": "Aoka ny voavonjy hanao hoe:", "pdfPath": "/songs/haa/haa - 4.pdf" },
+    { "id": 5, "number": 5, "title": "Asandratro ny tanako", "pdfPath": "/songs/haa/haa - 5.pdf" },
+    { "id": 6, "number": 6, "title": "Deraina ny anaranao", "pdfPath": "/songs/haa/haa - 6.pdf" }
   ],
   "tsanta": [
     { "id": 1, "number": 1, "title": "Ambony Ianao", "pdfPath": "/songs/tsanta/tsanta_1.pdf" },
